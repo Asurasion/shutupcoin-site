@@ -1,3 +1,4 @@
+/root
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +9,30 @@
   <style>
     /* Animations */
     @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-    .fade-in { animation: fadeIn 1.6s ease-in-out; }
-    @keyframes slideUp { from { transform:translateY(18px); opacity:0; } to { transform:translateY(0); opacity:1;} }
-    .slide-up { animation: slideUp 0.9s ease-out; }
+    .fade-in { animation: fadeIn 2s ease-in-out; }
+    @keyframes slideUp { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1;} }
+    .slide-up { animation: slideUp 1s ease-out; }
+
+    /* Ribbon */
+    .ribbon {
+      position:fixed; left:16px; top:16px; z-index:60;
+      background:linear-gradient(90deg,#ffcc00,#ff9f00);
+      color:#0b0b0b; padding:8px 14px; border-radius:999px; font-weight:800; box-shadow:0 6px 18px rgba(0,0,0,0.45);
+    }
+
+    /* Maintenance badge bottom-right */
+    .wip {
+      position:fixed; right:18px; bottom:18px; z-index:60; background:rgba(255,255,255,0.06); color:#cbd5e1; padding:8px 12px; border-radius:10px; font-weight:700;
+    }
+
     .hero-img { filter: saturate(1.05) contrast(1.02); }
   </style>
 </head>
 <body class="bg-black text-white font-sans">
+
+  <!-- Under construction ribbon -->
+  <div class="ribbon">SITE EN TRAVAUX — UNDER CONSTRUCTION</div>
+  <div class="wip">Work in progress</div>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen">
@@ -23,23 +41,26 @@
     <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
       <h1 class="text-4xl sm:text-6xl font-extrabold fade-in">SHUT UP AND TAKE MY MONEY!</h1>
-      <h2 class="text-2xl sm:text-4xl mt-4 font-semibold fade-in">The official meme token — ShutUpCoin (SHUT)</h2>
+      <h1 class="text-2xl sm:text-4xl mt-4 font-semibold fade-in">Tais-toi et prends mon argent !</h1>
       <button class="mt-8 px-8 py-3 bg-white text-black font-bold rounded-full transition transform hover:scale-105">BUY $SHUT</button>
+      <p class="mt-4 text-sm text-gray-300">This page is a demo — currently under construction.</p>
     </div>
   </section>
 
   <!-- About Section -->
   <section class="py-20 px-4 md:px-16 bg-black">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <h2 class="text-3xl font-bold mb-4 slide-up">About SHUT</h2>
         <p class="slide-up">
-          “Shut up and take my money!” is the iconic meme moment from Futurama where Fry throws cash at something he wants. <strong>$SHUT</strong> (ShutUpCoin) is a light-hearted memecoin inspired by that exact feeling — viral, absurd and community-driven. This project is for fun, memes and community events.
+          “Shut up and take my money!” is a popular meme featuring Fry from Futurama throwing cash. It perfectly captures the moment you see something so awesome that you just want to buy it immediately. <strong>$SHUT</strong> (ShutUpCoin) is our tongue-in-cheek memecoin tribute to that frenzy. It's a humorous, viral, community-driven token with an absurd spirit – 100% for fun, with no serious profit promises.
         </p>
       </div>
-      <div class="flex justify-center">
-        <!-- Web-optimized image -->
-        <img src="/mnt/data/shutup_assets/shut_web_1200x675.png" alt="Meme preview" class="rounded-2xl shadow-lg max-w-sm">
+      <div>
+        <h2 class="text-3xl font-bold mb-4 slide-up">À propos de SHUT</h2>
+        <p class="slide-up">
+          La phrase « Shut up and take my money! » vient d’un épisode de Futurama où Fry brandit de l’argent. Ce meme exprime l’enthousiasme maximal de l'acheteur, prêt à tout pour avoir le produit. Le token <strong>$SHUT</strong> est un memecoin décalé inspiré de ce moment, humoristique et communautaire. C’est 100 % pour le fun, sans promesse sérieuse de gain.
+        </p>
       </div>
     </div>
   </section>
@@ -53,6 +74,13 @@
         <li><strong>Taxes (Buy/Sell):</strong> 5% total (3% to liquidity, 1% marketing, 1% community rewards)</li>
       </ul>
     </div>
+    <div class="max-w-3xl mx-auto mt-8 text-center">
+      <h2 class="text-3xl font-bold mb-6">Tokenomics (FR)</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Offre totale :</strong> 1 000 000 000 SHUT</li>
+        <li><strong>Taxes (Achat/Vente) :</strong> 5 % total (3 % vers liquidité, 1 % marketing, 1 % récompenses communauté)</li>
+      </ul>
+    </div>
   </section>
 
   <!-- How to Buy Section -->
@@ -62,7 +90,7 @@
         <h2 class="text-3xl font-bold mb-4 slide-up">How to Buy</h2>
         <ol class="list-decimal list-inside space-y-2 slide-up">
           <li>Connect your crypto wallet (e.g., MetaMask).</li>
-          <li>Go to a decentralized exchange (DEX) like Uniswap/PancakeSwap or PumpFun.</li>
+          <li>Go to a decentralized exchange (DEX) like Uniswap/PancakeSwap.</li>
           <li>Add the $SHUT token contract (coming soon) and purchase $SHUT.</li>
           <li>Add $SHUT to your wallet as a custom token to view your balance.</li>
         </ol>
@@ -85,19 +113,19 @@
     <div class="max-w-4xl mx-auto space-y-8 text-center">
       <div>
         <h3 class="text-2xl font-semibold">1. Launch (Lancement)</h3>
-        <p>Deploy the token and announce officially.</p>
+        <p>Déploiement du token et annonce officielle.</p>
       </div>
       <div>
         <h3 class="text-2xl font-semibold">2. PumpFun Listing</h3>
-        <p>List $SHUT on PumpFun to increase visibility.</p>
+        <p>Liste du $SHUT sur l’exchange PumpFun pour accroître la visibilité.</p>
       </div>
       <div>
         <h3 class="text-2xl font-semibold">3. Airdrop</h3>
-        <p>Free token distribution to early community members.</p>
+        <p>Distribution gratuite de tokens aux premiers membres de la communauté.</p>
       </div>
       <div>
         <h3 class="text-2xl font-semibold">4. Meme Expansion (Expansion du meme)</h3>
-        <p>Spread the $SHUT meme through merch, partnerships, and community events.</p>
+        <p>Diffusion du meme $SHUT via du merchandising, partenariats et événements communautaires.</p>
       </div>
     </div>
   </section>
